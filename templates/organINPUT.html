@@ -59,17 +59,15 @@
     </style>
   </head>
   <body>
-    <form action="/action_page.php">
+    <form name="form1" id="form1" action="/input" method="post">
       <h1>Access & Donors Form</h1>
       <div class="formcontainer">
-  </body>
 
-  <form name="form1" id="form1" action="/action_page.php">
     <div class="container">
-        <label for="uname"><strong>Public Key</strong></label>
-        <input type="text" placeholder="################ " name="uname" required>
-        <label for="uname"><strong>Private Key</strong></label>
-        <input type="text" placeholder="################ " name="uname" required>
+        <label for="pubkey"><strong>Public Key</strong></label>
+        <input type="text" placeholder="################ " name="pubkey" required>
+        <label for="privkey"><strong>Private Key</strong></label>
+        <input type="text" placeholder="################ " name="privkey" required>
 
         <br></br>
 
@@ -141,13 +139,13 @@ State: <select name="state" id="state">
   </select>
 
   <div class="container">
-        <label for="uname"><strong>City</strong></label>
-        <input type="text" placeholder="Name of city" name="uname" required>
-        <label for="uname"><strong>OPO</strong></label>
-        <input type="text" placeholder="Name of OPO - If not applicable, type N/A" name="uname" required>
-        <label for="uname"><strong>Patient Name</strong></label>
-        <input type="text" placeholder="Last, First" name="uname" required>
-        <label for="uname"><strong>Date Of Birth</strong></label>
+        <label for="city"><strong>City</strong></label>
+        <input type="text" placeholder="Name of city" name="city" required>
+        <label for="opo"><strong>OPO</strong></label>
+        <input type="text" placeholder="Name of OPO - If not applicable, type N/A" name="opo" required>
+        <label for="pname"><strong>Patient Name</strong></label>
+        <input type="text" placeholder="Last, First" name="pname" required>
+        <label for="bday"><strong>Date Of Birth</strong></label>
         <input type="text" placeholder="MM/DD/YYYY" name="bday" required>       
 
 Blood Type: <select name="blood" id="blood"/>
@@ -165,7 +163,7 @@ Blood Type: <select name="blood" id="blood">
 
 <br><br>
 
-Organ Type: <select name="subject" id="subject">
+Organ Type: <select name="organ" id="organ">
      <option value="" selected="selected">Select</option>
      <option value="" selected="selected">Heart</option>
      <option value="" selected="selected">Liver</option>
@@ -181,12 +179,14 @@ Organ Type: <select name="subject" id="subject">
 
      <div class="container">
         <label for="uname"><strong>Notes</strong></label>
-        <input type="text" placeholder="Organ Size" name="uname" required>
+        <input type="text" placeholder="Organ Size" name="organsize" required>
 
 
     <div class="container">
         <label for="uname"><strong>Notes</strong></label>
-        <input type="text" placeholder="Additional Notes" name="uname" required>
+        <input type="text" placeholder="Additional Notes" name="notes" required>
 
   <button type="submit">Submit</button>
   </form>
+
+</body>
